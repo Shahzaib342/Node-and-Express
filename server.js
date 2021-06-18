@@ -39,12 +39,12 @@ async function post(request, func) {
             M = await promise4;
             break;
         }
-      return {'M': M};
+      return {'M': M, 'success': true};
   }
 
 app.post('/start', function(request, response) {
     M = 0;
-    response.send({'success': true});
+    response.send({'success': true,'M': M});
 });
 
 app.post('/calc/add', function(request, response) {
@@ -72,10 +72,21 @@ app.post('/calc/divide', function(request, response) {
 });
 
 app.get('/calc/M', function(request, response) {
-    return response.send( {'M': M});
+    return response.send( {'success': true,'M': M});
 });
 
 app.get('/calc/reset', function(request, response) {
     M = 0 ;
-    return response.send( {'M': M});
+    return response.send( {'success': true,'M': M});
 });
+
+app.use(function (err, req, res, next) {
+    console.error(err.stack)
+    res.status(500).send('Something broke!')
+  })
+
+//The 404 Route (ALWAYS Keep this as the last route)
+ app.get('*', function(req, res){
+    res.send('what???', 404);
+});
+
