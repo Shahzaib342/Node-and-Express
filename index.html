@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+</head>
+
+<body>
+
+    <h1>Run Calculations</h1>
+
+    <form action="http://localhost:8000/start" method="post">
+        <input type="submit" value="Start Calculations">
+    </form>
+    <br>
+    <form action="http://localhost:8000/calc/add" method="post">
+        <input type="text" name="num">
+        <input type="submit" value="Add Number">
+    </form>
+
+    <br>
+    <form action="http://localhost:8000/calc/sub" method="post">
+        <input type="text" name="num">
+        <input type="submit" value="Subtract Number">
+    </form>
+
+    <br>
+    <form action="http://localhost:8000/calc/multiply" method="post">
+        <input type="text" name="num">
+        <input type="submit" value="Multiply Number">
+    </form>
+
+    <br>
+    <form action="http://localhost:8000/calc/divide" method="post">
+        <input type="text" name="num">
+        <input type="submit" value="Divide Number">
+    </form>
+
+    <br>
+    <form action="http://localhost:8000/calc/M" method="get">
+        <input type="submit" value="Get Number">
+    </form>
+
+    <br>
+    <form action="http://localhost:8000/calc/reset" method="get">
+        <input type="submit" value="reset Number">
+    </form>
+
+    <br>
+    <form action="http://localhost:8000/calc/error" method="get">
+        <input type="submit" value="Check 404">
+    </form>
+
+</body>
+
+</html>
