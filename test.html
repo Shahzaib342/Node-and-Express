@@ -1,0 +1,69 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta content="" name="description">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="" property="og:title">
+  <meta content="" property="og:type">
+  <meta content="" property="og:url">
+  <meta content="" property="og:image">
+  <link href="test.css" rel="stylesheet">
+  <meta content="#fafafa" name="theme-color">
+</head>
+
+<body>
+<div class="container" style="width: 80%; margin: auto">
+  <h2>My Assignment Tasks</h2>
+  <p>Click on each tab to test respective tasks</p>
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'qSyntax')">qSyntax</button>
+    <button class="tablinks" onclick="openTab(event, 'qObj')">qObj</button>
+    <button class="tablinks" onclick="openTab(event, 'qCalc')">qCalc</button>
+    <button class="tablinks" onclick="openTab(event, 'qAsync')">qAsync</button>
+  </div>
+  <div class="tabcontent" id="qSyntax">
+    <div class="container" style="width: 95%; margin: 25px auto 25px auto;">
+      <div class="header" id="myDIV">
+        <h2 style="margin:5px">My To Do List</h2>
+        <input id="myInput" placeholder="Title..." type="text">
+        <span class="addBtn" onclick="toDoList.createListElement()">Add</span>
+      </div>
+      <ul id="myUL">
+        <li>Hit the gym</li>
+        <li class="checked">Pay bills</li>
+        <li>Meet George</li>
+        <li>Buy eggs</li>
+        <li>Read a book</li>
+        <li>Organize office</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="tabcontent" id="qObj">
+    <h3>Calculator</h3>
+    <table id="qObj-table">
+    </table>
+  </div>
+
+  <div class="tabcontent" id="qCalc">
+    <h3>Calculator</h3>
+    <input id="number" name="number" type="number">
+    <button onclick="addNumber()">Add</button>
+    <button onclick="subNumber()">Subtract</button>
+    <h4>Total Value: <span id="total_value">0</span></h4>
+  </div>
+
+  <div class="tabcontent" id="qAsync">
+    <h3>Running Async Function</h3>
+    <p>Please wait for 11.5 Seconds.</p>
+    <h4>Value printed after 11.5 Seconds: <span id="async_value" style="color: red">waiting.....</span></h4>
+  </div>
+</div>
+<script src="/learn.js"></script>
+<script src="test.js"></script>
+</body>
+
+</html>
